@@ -37,7 +37,12 @@ public class PlayerMovement : MonoBehaviour
             //Check for left click
             if (Input.GetMouseButtonDown(0))
             {
-                if (uiWheel.activeSelf == true && results.Where(r => r.gameObject.layer == 5).Count() <= 0)
+                if (hitInfo.transform.gameObject.layer == 7) //if click on object
+                {
+                    uiWheel.SetActive(false);
+                    print("object interaction");
+                }
+                else if (uiWheel.activeSelf == true && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if active + click off ui
                 {
                     print(hitInfo.transform.gameObject.layer);
                     uiWheel.SetActive(false);
@@ -47,6 +52,9 @@ public class PlayerMovement : MonoBehaviour
                     uiWheel.SetActive(true);
                     uiWheel.transform.position = Input.mousePosition;
                 }
+
+
+                
             }
 
         }

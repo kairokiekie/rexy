@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             var eventData = new PointerEventData(EventSystem.current);
             eventData.position = Input.mousePosition;
             var results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(eventData, results); //this for UI detection
+            EventSystem.current.RaycastAll(eventData, results); // all this for UI detection
 
             //Check for left click
             if (Input.GetMouseButtonDown(0))
@@ -52,5 +53,13 @@ public class PlayerMovement : MonoBehaviour
 
         toHideOrShow.SetActive(lHitSomething);
         toHideOrShow.transform.position = hitInfo.point;
+    }
+
+    public void MoveToTarget()
+    {
+        uiWheel.SetActive(false);
+        Vector3 target = toHideOrShow.transform.position;
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = target;
     }
 }

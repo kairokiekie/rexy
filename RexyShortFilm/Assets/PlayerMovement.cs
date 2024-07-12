@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private RaycastHit _hitInfo;
     private Camera _Camera;
+    private GameObject _currentObjectSelection;
 
     private void Start()
     {
@@ -74,8 +75,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void InteractWithObject()
     {
-        print(_hitInfo.transform.position);
         objectWheel.SetActive(false);
+        _currentObjectSelection = _hitInfo.transform.gameObject;
+
         NavMeshAgent agent = GetComponent<NavMeshAgent>(); //clean this (global navmesh agent name case)
         agent.stoppingDistance = objectStoppingDistance;
         agent.destination = _hitInfo.transform.position;
@@ -89,6 +91,8 @@ public class PlayerMovement : MonoBehaviour
     public void MoveToTarget()
     {
         moveWheel.SetActive(false);
+        _currentObjectSelection = _hitInfo.transform.gameObject;
+
         Vector3 target = toHideOrShow.transform.position;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = movementStoppingDistance;

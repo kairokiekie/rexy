@@ -4,15 +4,21 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private int _MaxRayCastDistance = 10;
+    private int _MaxRayCastDistance = 1000;
     [SerializeField] private LayerMask _Mask = default;
     [SerializeField] private GameObject toHideOrShow = default;
-    [SerializeField] private GameObject uiWheel;
-    [SerializeField] private GameObject uiCanvas;
 
+    [SerializeField] private GameObject uiCanvas;
+    [SerializeField] private GameObject moveWheel;
+    [SerializeField] private GameObject objectWheel;
+    [SerializeField] private float objectStoppingDistance = 3f;
+    [SerializeField] private float movementStoppingDistance = 0.5f;
+
+    private RaycastHit _hitInfo;
     private Camera _Camera;
 
     private void Start()
@@ -26,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Ray lRay = _Camera.ScreenPointToRay(Input.mousePosition);
 
         bool lHitSomething = Physics.Raycast(lRay, out RaycastHit hitInfo, _MaxRayCastDistance, _Mask);
+        _hitInfo = hitInfo;
 
         if (lHitSomething)
         {
@@ -39,18 +46,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (hitInfo.transform.gameObject.layer == 7) //if click on object
                 {
-                    uiWheel.SetActive(false);
-                    print("object interaction");
+                    moveWheel.SetActive(false);
+                    objectWheel.SetActive(true);
+                    objectWheel.transform.position = Input.mousePosition;
                 }
-                else if (uiWheel.activeSelf == true && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if active + click off ui
+                else if (objectWheel.activeSelf || moveWheel.activeSelf && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if click off ui
                 {
-                    print(hitInfo.transform.gameObject.layer);
-                    uiWheel.SetActive(false);
+                    moveWheel.SetActive(false);
+                    objectWheel.SetActive(false);
                 }
-                else if (uiWheel.activeSelf == false)
+                else if (moveWheel.activeSelf == false) // if nothing else, and click on floor
                 {
-                    uiWheel.SetActive(true);
-                    uiWheel.transform.position = Input.mousePosition;
+                    moveWheel.SetActive(true);
+                    objectWheel.SetActive(false);
+                    moveWheel.transform.position = Input.mousePosition;
                 }
 
 
@@ -63,11 +72,28 @@ public class PlayerMovement : MonoBehaviour
         toHideOrShow.transform.position = hitInfo.point;
     }
 
+    public void InteractWithObject()
+    {
+        print(_hitInfo.transform.position);
+        objectWheel.SetActive(false);
+        NavMeshAgent agent = GetComponent<NavMeshAgent>(); //clean this (global navmesh agent name case)
+        agent.stoppingDistance = objectStoppingDistance;
+        agent.destination = _hitInfo.transform.position;
+
+    }
+    private void ArrivedAtObject()
+    {
+        //uwu
+    }
+
     public void MoveToTarget()
     {
-        uiWheel.SetActive(false);
+        moveWheel.SetActive(false);
         Vector3 target = toHideOrShow.transform.position;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.stoppingDistance = movementStoppingDistance;
         agent.destination = target;
     }
+
+    
 }

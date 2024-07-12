@@ -8,6 +8,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+[Ll]og/
 [Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
@@ -51,6 +52,7 @@ ExportedObj/
 .pidb.meta
 .pdb.meta
 .mdb.meta
+.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt

@@ -931,7 +931,7 @@ MonoBehaviour:
   moveWheel: {fileID: 76859879}
   objectWheel: {fileID: 872740036}
   objectStoppingDistance: 3
-  movementStoppingDistance: 0.5
+  movementStoppingDistance: 0
 --- !u!195 &1003854771
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -21,10 +22,18 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit _hitInfo;
     private Camera _Camera;
     private GameObject _currentObjectSelection;
+    private Animator _animator;
+    private NavMeshAgent agent;
+    private Vector3 target;
+
+    private bool idleAnimation = false;
 
     private void Start()
     {
         _Camera = Camera.main;
+        _animator = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        agent = this.transform.GetComponent<NavMeshAgent>();
+        target = toHideOrShow.transform.position;
     }
 
     private void Update()
@@ -69,7 +78,12 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        toHideOrShow.SetActive(lHitSomething);
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            ArrivedAtObject();
+        }
+
+            toHideOrShow.SetActive(lHitSomething);
         toHideOrShow.transform.position = hitInfo.point;
     }
 
@@ -78,14 +92,19 @@ public class PlayerMovement : MonoBehaviour
         objectWheel.SetActive(false);
         _currentObjectSelection = _hitInfo.transform.gameObject;
 
-        NavMeshAgent agent = GetComponent<NavMeshAgent>(); //clean this (global navmesh agent name case)
         agent.stoppingDistance = objectStoppingDistance;
         agent.destination = _hitInfo.transform.position;
 
     }
     private void ArrivedAtObject()
     {
-        //uwu
+        if (!idleAnimation)
+        {
+            _animator.SetTrigger("idle");
+            idleAnimation = true;
+
+        }
+
     }
 
     public void MoveToTarget()
@@ -93,9 +112,11 @@ public class PlayerMovement : MonoBehaviour
         moveWheel.SetActive(false);
         _currentObjectSelection = _hitInfo.transform.gameObject;
 
-        Vector3 target = toHideOrShow.transform.position;
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        target = toHideOrShow.transform.position;
         agent.stoppingDistance = movementStoppingDistance;
+
+        _animator.SetTrigger("walk");
+        idleAnimation = false;
         agent.destination = target;
     }
 

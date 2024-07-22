@@ -8,6 +8,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+/[Ll]ogs/
 [Ll]og/
 [Uu]ser[Ss]ettings/
 
@@ -47,6 +48,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+.log
 
 # Unity3D generated meta files
 .pidb.meta

@@ -20,3 +20,6 @@
 *.PNG filter=lfs diff=lfs merge=lfs -text
 *.exr filter=lfs diff=lfs merge=lfs -text
 *.mask filter=lfs diff=lfs merge=lfs -text
+*.asmdef filter=lfs diff=lfs merge=lfs -text
+*.cfxrshader filter=lfs diff=lfs merge=lfs -text
+*.cginc filter=lfs diff=lfs merge=lfs -text

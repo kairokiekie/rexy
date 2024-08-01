@@ -78,9 +78,10 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
         {
             ArrivedAtObject();
+            print("arrived");
         }
 
             toHideOrShow.SetActive(lHitSomething);

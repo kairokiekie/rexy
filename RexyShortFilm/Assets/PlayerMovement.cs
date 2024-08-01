@@ -78,14 +78,37 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1)
+        if (this.gameObject.transform.position.x == target.x && this.gameObject.transform.position.z == target.z)
         {
-            ArrivedAtObject();
-            print("arrived");
+            ArrivedAtPos();
         }
 
             toHideOrShow.SetActive(lHitSomething);
         toHideOrShow.transform.position = hitInfo.point;
+    }
+
+    private void ArrivedAtPos()
+    {
+            if (!idleAnimation)
+            {
+                _animator.SetTrigger("idle");
+                idleAnimation = true;
+
+            }
+
+
+    }
+
+    // The following functions are called by UI buttons
+    public void MoveToTarget()
+    {
+        moveWheel.SetActive(false);
+        _currentObjectSelection = null;
+
+        agent.stoppingDistance = movementStoppingDistance;
+        WalkCycle();
+
+        
     }
 
     public void InteractWithObject()
@@ -94,32 +117,29 @@ public class PlayerMovement : MonoBehaviour
         _currentObjectSelection = _hitInfo.transform.gameObject;
 
         agent.stoppingDistance = objectStoppingDistance;
-        agent.destination = _hitInfo.transform.position;
-
-    }
-    private void ArrivedAtObject()
-    {
-        if (!idleAnimation)
-        {
-            _animator.SetTrigger("idle");
-            idleAnimation = true;
-
-        }
+        WalkCycle();
 
     }
 
-    public void MoveToTarget()
+    public void WalkCycle()
     {
-        moveWheel.SetActive(false);
-        _currentObjectSelection = _hitInfo.transform.gameObject;
-
         target = toHideOrShow.transform.position;
-        agent.stoppingDistance = movementStoppingDistance;
 
         _animator.SetTrigger("walk");
         idleAnimation = false;
+
         agent.destination = target;
     }
 
-    
+    // These functions are called by other game objects
+
+    public void ArrivedAtObject(AnimationClip _anim)
+    {
+        //so on trigger enter, if player, do anims:
+        print("interact anim " + _anim);
+        _animator.Play(_anim.name);
+    }
+
+
+
 }

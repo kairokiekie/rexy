@@ -9,6 +9,7 @@ TagManager:
   - waypoint
   - pickuppoint
   - stealingpoint
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Floor
   - InteractableObject
-  - 
+  - Decor
   - 
   - 
   - 

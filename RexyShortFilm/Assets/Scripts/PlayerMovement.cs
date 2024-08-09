@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
     {
         objectWheel.SetActive(false);
         _currentObjectSelection = _hitInfo.transform.gameObject;
+        _currentObjectSelection.transform.GetChild(1).gameObject.SetActive(true);
 
         agent.stoppingDistance = objectStoppingDistance;
         WalkCycle();

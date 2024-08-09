@@ -17,6 +17,7 @@ public class PlayerDetection : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             player.GetComponent<PlayerMovement>().ArrivedAtObject(animToPlay);
+            gameObject.SetActive(false);
         }
     }
 }

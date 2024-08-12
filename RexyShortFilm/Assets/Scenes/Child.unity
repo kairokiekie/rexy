@@ -430,79 +430,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &541537517
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.4572
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.4572
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.4572
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.6261973
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.6477776
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_Name
-      value: FireReactWoman
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 4298d6652b94228418759bdd05744793, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e015ff1c5d7501f4eadee460757266b2, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4298d6652b94228418759bdd05744793, type: 3}
 --- !u!1 &582299295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,7 +1728,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3e91277072d429a45af25909979f1ae0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1e639171bbf4ecb488e0e2df741f7104, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1788520720
 GameObject:
@@ -2013,6 +1940,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1001 &1489673296411828518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7214852056838895973, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_Name
+      value: FireReactWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.6261973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.6477776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028683473572111327, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 732e66947a3b734438f1eb300c41940b, type: 3}
 --- !u!1001 &1977959999236690375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2258,5 +2242,5 @@ SceneRoots:
   - {fileID: 2127378019}
   - {fileID: 582299300}
   - {fileID: 7039863333127951265}
-  - {fileID: 541537517}
+  - {fileID: 1489673296411828518}
   - {fileID: 40169712}

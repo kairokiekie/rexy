@@ -59,6 +59,8 @@ MonoBehaviour:
   objectWheel: {fileID: 0}
   objectStoppingDistance: 2.7
   movementStoppingDistance: 0
+  canvasManager: {fileID: 0}
+  currentPlayer: {fileID: 0}
 --- !u!33 &1289048744999853889
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -228,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584613354768528393, guid: bae26acf817c6dc4e82f95d9ef4ab46a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

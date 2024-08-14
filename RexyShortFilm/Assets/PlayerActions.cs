@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     public GameObject currentPlayer;
-    
+    [SerializeField] public GameObject gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +22,10 @@ public class PlayerActions : MonoBehaviour
 
     public void MoveAction()
     {
-        currentPlayer.GetComponent<PlayerMovement>().MoveToTarget();
+        gameManager.GetComponent<PlayerMovement>().MoveToTarget();
     }
     public void InteractAction()
     {
-        currentPlayer.GetComponent<PlayerMovement>().InteractWithObject();
-    }
-    public void SwitchPlayer(GameObject newPlayer)
-    {
-        currentPlayer = newPlayer;
+        gameManager.GetComponent<PlayerMovement>().InteractWithObject();
     }
 }

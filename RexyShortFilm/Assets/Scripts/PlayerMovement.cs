@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject objectWheel;
     [SerializeField] private float objectStoppingDistance = 3f;
     [SerializeField] private float movementStoppingDistance = 0.5f;
+    [SerializeField] private GameObject canvasManager;
 
     private RaycastHit _hitInfo;
     private Camera _Camera;
@@ -27,13 +28,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 target;
 
     private bool idleAnimation = false;
+    [SerializeField] public GameObject currentPlayer;
 
     private void Start()
     {
         _Camera = Camera.main;
-        _animator = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
-        agent = this.transform.GetComponent<NavMeshAgent>();
         target = toHideOrShow.transform.position;
+
+        SwitchPlayer(currentPlayer);
+        //currentPlayer = canvasManager.GetComponent<PlayerActions>().currentPlayer;
     }
 
     private void Update()
@@ -78,12 +81,12 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (this.gameObject.transform.position.x == target.x && this.gameObject.transform.position.z == target.z)
+        if (currentPlayer.gameObject.transform.position.x == target.x && currentPlayer.gameObject.transform.position.z == target.z)
         {
             ArrivedAtPos();
         }
 
-            toHideOrShow.SetActive(lHitSomething);
+        toHideOrShow.SetActive(lHitSomething);
         toHideOrShow.transform.position = hitInfo.point;
     }
 
@@ -128,6 +131,8 @@ public class PlayerMovement : MonoBehaviour
 
         _animator.SetTrigger("walk");
         idleAnimation = false;
+        print(_animator);
+        print(agent);
 
         agent.destination = target;
     }
@@ -138,7 +143,16 @@ public class PlayerMovement : MonoBehaviour
     {
         //so on trigger enter, if player, do anims:
         print("interact anim " + _anim);
+        print(_animator); //returning NULL : why?
         _animator.Play(_anim.name);
+    }
+
+    public void SwitchPlayer(GameObject newPlayer)
+    {
+        currentPlayer = newPlayer;
+        _animator = currentPlayer.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        print(_animator);
+        agent = currentPlayer.transform.GetComponent<NavMeshAgent>();
     }
 
 

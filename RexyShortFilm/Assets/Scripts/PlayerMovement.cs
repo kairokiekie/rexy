@@ -131,8 +131,6 @@ public class PlayerMovement : MonoBehaviour
 
         _animator.SetTrigger("walk");
         idleAnimation = false;
-        print(_animator);
-        print(agent);
 
         agent.destination = target;
     }
@@ -142,15 +140,16 @@ public class PlayerMovement : MonoBehaviour
     public void ArrivedAtObject(AnimationClip _anim)
     {
         //so on trigger enter, if player, do anims:
-        print("interact anim " + _anim);
-        print(_animator); //returning NULL : why?
+        print("interact anim " + _anim.name);
+        print(currentPlayer);
         _animator.Play(_anim.name);
     }
 
     public void SwitchPlayer(GameObject newPlayer)
     {
         currentPlayer = newPlayer;
-        _animator = currentPlayer.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        print("new player: " + newPlayer);
+        _animator = currentPlayer.transform.GetChild(0).GetComponent<Animator>();
         print(_animator);
         agent = currentPlayer.transform.GetComponent<NavMeshAgent>();
     }

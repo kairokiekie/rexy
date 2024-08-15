@@ -42,10 +42,14 @@ public class HairSelection : MonoBehaviour
         }
     }
 
-    void RotateHair(int direction)
+    public void RotateHair(int direction)
     {
-        hairList[currentHairIndex].SetActive(false);
-        currentHairIndex = currentHairIndex + direction;
-        hairList[currentHairIndex].SetActive(true);
+        if (currentHairIndex > 0 && direction == -1 || currentHairIndex != hairList.Count - 1 && direction == 1)
+        {
+            hairList[currentHairIndex].SetActive(false);
+            currentHairIndex = currentHairIndex + direction;
+            hairList[currentHairIndex].SetActive(true);
+        }
+        
     }
 }

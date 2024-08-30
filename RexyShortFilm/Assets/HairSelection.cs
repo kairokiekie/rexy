@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HairSelection : MonoBehaviour
 {
@@ -51,5 +52,10 @@ public class HairSelection : MonoBehaviour
             hairList[currentHairIndex].SetActive(true);
         }
         
+    }
+
+    public void switchScenes()
+    {
+        SceneManager.LoadScene("Prototype");
     }
 }

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private int _MaxRayCastDistance = 1000;
     [SerializeField] private LayerMask _Mask = default;
+    [SerializeField] private LayerMask _UIMask = default;
     [SerializeField] private GameObject toHideOrShow = default;
 
     [SerializeField] private GameObject uiCanvas;
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         Ray lRay = _Camera.ScreenPointToRay(Input.mousePosition);
 
         bool lHitSomething = Physics.Raycast(lRay, out RaycastHit hitInfo, _MaxRayCastDistance, _Mask);
+        bool uiInteraction = Physics.Raycast(lRay, out RaycastHit UIhitInfo, _MaxRayCastDistance, _UIMask);
         _hitInfo = hitInfo;
 
         if (lHitSomething)
@@ -57,26 +59,30 @@ public class PlayerMovement : MonoBehaviour
             //Check for left click
             if (Input.GetMouseButtonDown(0))
             {
+
                 if (hitInfo.transform.gameObject.layer == 7) //if click on object
                 {
                     moveWheel.SetActive(false);
                     objectWheel.SetActive(true);
                     objectWheel.transform.position = Input.mousePosition;
                 }
-                else if (objectWheel.activeSelf || moveWheel.activeSelf && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if click off ui
+                //else if (objectWheel.activeSelf || moveWheel.activeSelf && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if click off ui
+                
+                else if (hitInfo.transform.gameObject.layer == 6 && results.Where(r => r.gameObject.layer == 9).Count() <= 0) // if nothing else, and click on floor
                 {
-                    moveWheel.SetActive(false);
-                    objectWheel.SetActive(false);
-                }
-                else if (moveWheel.activeSelf == false) // if nothing else, and click on floor
-                {
+                    print("stoppit");
                     moveWheel.SetActive(true);
                     objectWheel.SetActive(false);
                     moveWheel.transform.position = Input.mousePosition;
                 }
+                else if (objectWheel.activeSelf && hitInfo.transform.gameObject.layer != 5)
+                {
+                    moveWheel.SetActive(false);
+                    objectWheel.SetActive(false);
+                }
 
 
-                
+
             }
 
         }

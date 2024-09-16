@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 11b78dbef78220d40be60c2848181654
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: kiss
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 112
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: -0.95
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: casual_Male_K:bip Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Finger01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip L Finger11
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: casual_Male_K:bip R Finger11
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: maleKiss(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.00000047235872, z: 0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: casual_Male_K:casual_Male_K
+      parentName: maleKiss(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: casual_Male_K:rig_CharRoot
+      parentName: maleKiss(Clone)
+      position: {x: 0.14466612, y: 74.66883, z: -49.680134}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 2, y: 2, z: 2}
+    - name: casual_Male_K:bip
+      parentName: casual_Male_K:rig_CharRoot
+      position: {x: -0.14466612, y: -1.9846494, z: 10.637909}
+      rotation: {x: 0, y: 0, z: 0.7071063, w: 0.70710725}
+      scale: {x: 2, y: 2, z: 2}
+    - name: casual_Male_K:bip Pelvis
+      parentName: casual_Male_K:bip
+      position: {x: -0.000045895573, y: -6.184564e-11, z: 599.2527}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 2.0000002, y: 2.0000002, z: 2.0000002}
+    - name: casual_Male_K:bip R Thigh
+      parentName: casual_Male_K:bip Pelvis
+      position: {x: -0.000015258789, y: -0.000009536743, z: -9.608835}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 2, y: 2.0000002, z: 2.0000002}
+    - name: casual_Male_K:bip R Calf
+      parentName: casual_Male_K:bip R Thigh
+      position: {x: -36.270164, y: 0.00000023841858, z: 0.0000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2.0000002, z: 1.9999996}
+    - name: casual_Male_K:bip R Foot
+      parentName: casual_Male_K:bip R Calf
+      position: {x: -40.162285, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.9999998, y: 1.9999999, z: 2.0000002}
+    - name: casual_Male_K:bip R Toe0
+      parentName: casual_Male_K:bip R Foot
+      position: {x: -8.66919, y: 14.267431, z: 0.1474781}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 2.0000002, y: 1.9999998, z: 2.0000002}
+    - name: casual_Male_K:bip L Thigh
+      parentName: casual_Male_K:bip Pelvis
+      position: {x: 0.000015258789, y: 0.00001692772, z: 9.608835}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 2.0000012, y: 2.0000005, z: 2.000001}
+    - name: casual_Male_K:bip L Calf
+      parentName: casual_Male_K:bip L Thigh
+      position: {x: -36.270157, y: -0.00000023841858, z: -0.0000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 1.9999999, z: 2.0000002}
+    - name: casual_Male_K:bip L Foot
+      parentName: casual_Male_K:bip L Calf
+      position: {x: -40.162285, y: 0.00000047683716, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2, y: 2.0000005, z: 1.9999995}
+    - name: casual_Male_K:bip L Toe0
+      parentName: casual_Male_K:bip L Foot
+      position: {x: -8.66919, y: 14.267431, z: -0.1474781}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 2, y: 1.9999996, z: 2.000001}
+    - name: casual_Male_K:bip Spine
+      parentName: casual_Male_K:bip Pelvis
+      position: {x: -7.2285385, y: 0.906144, z: 0.0000037773716}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2, y: 2, z: 2}
+    - name: casual_Male_K:bip Spine1
+      parentName: casual_Male_K:bip Spine
+      position: {x: -19.559814, y: -0.01900196, z: -0.00000005086258}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2, z: 2.0000002}
+    - name: casual_Male_K:bip R Clavicle
+      parentName: casual_Male_K:bip Spine1
+      position: {x: -24.379944, y: -0.0398674, z: -4.450923}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 2.0000005, y: 2.0000002, z: 2}
+    - name: casual_Male_K:bip R UpperArm
+      parentName: casual_Male_K:bip R Clavicle
+      position: {x: -11.674609, y: 0.9709803, z: 4.2290897}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2.0000007, z: 2.0000005}
+    - name: casual_Male_K:bip R Forearm
+      parentName: casual_Male_K:bip R UpperArm
+      position: {x: -24.493965, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2, z: 1.9999996}
+    - name: casual_Male_K:bip R Hand
+      parentName: casual_Male_K:bip R Forearm
+      position: {x: -24.018085, y: -0.0000019073486, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 2.000001, y: 2.0000005, z: 2.0000005}
+    - name: casual_Male_K:bip R Finger0
+      parentName: casual_Male_K:bip R Hand
+      position: {x: -5.1850357, y: 2.4488678, z: 5.5632477}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 2.0000007, y: 2.000001, z: 2.0000005}
+    - name: casual_Male_K:bip R Finger01
+      parentName: casual_Male_K:bip R Finger0
+      position: {x: -4.4082108, y: -0.0000038146973, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.9999995, y: 1.9999995, z: 2}
+    - name: casual_Male_K:bip R Finger1
+      parentName: casual_Male_K:bip R Hand
+      position: {x: -11.399723, y: -0.62820435, z: 0.03972435}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000005, y: 2.0000002, z: 1.9999999}
+    - name: casual_Male_K:bip R Finger11
+      parentName: casual_Male_K:bip R Finger1
+      position: {x: -3.8262138, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2, y: 1.9999999, z: 1.9999989}
+    - name: casual_Male_K:bip Neck
+      parentName: casual_Male_K:bip Spine1
+      position: {x: -29.51529, y: 2.7971764, z: 0.0000049628143}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.000001, y: 2.0000012, z: 2.0000005}
+    - name: casual_Male_K:bip Head
+      parentName: casual_Male_K:bip Neck
+      position: {x: -5.2847595, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000005, y: 2, z: 2.0000012}
+    - name: casual_Male_K:bip L Clavicle
+      parentName: casual_Male_K:bip Spine1
+      position: {x: -24.379944, y: -0.039892197, z: 4.450922}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 2, y: 1.9999999, z: 2}
+    - name: casual_Male_K:bip L UpperArm
+      parentName: casual_Male_K:bip L Clavicle
+      position: {x: -11.674619, y: 0.9709822, z: -4.229092}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2.0000005, z: 2}
+    - name: casual_Male_K:bip L Forearm
+      parentName: casual_Male_K:bip L UpperArm
+      position: {x: -24.493965, y: -0.0000009536743, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 1.9999998, z: 2}
+    - name: casual_Male_K:bip L Hand
+      parentName: casual_Male_K:bip L Forearm
+      position: {x: -24.01809, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 2.0000007, y: 2.0000007, z: 2.0000021}
+    - name: casual_Male_K:bip L Finger0
+      parentName: casual_Male_K:bip L Hand
+      position: {x: -5.1850395, y: 2.4488373, z: -5.5632496}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 2.0000005, y: 2.0000007, z: 2.000001}
+    - name: casual_Male_K:bip L Finger01
+      parentName: casual_Male_K:bip L Finger0
+      position: {x: -4.4082108, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000002, y: 2.0000007, z: 1.9999999}
+    - name: casual_Male_K:bip L Finger1
+      parentName: casual_Male_K:bip L Hand
+      position: {x: -11.3997345, y: -0.6282196, z: -0.03972435}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 2.0000007, y: 2.0000014, z: 2.0000017}
+    - name: casual_Male_K:bip L Finger11
+      parentName: casual_Male_K:bip L Finger1
+      position: {x: -3.8262253, y: 0, z: 0.0000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.9999999, y: 1.9999998, z: 2.0000005}
+    - name: casual_Male_K:acc_intelect_glasses
+      parentName: maleKiss(Clone)
+      position: {x: -0, y: 155.20662, z: 8.204192}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

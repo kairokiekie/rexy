@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float objectStoppingDistance = 3f;
     [SerializeField] private float movementStoppingDistance = 0.5f;
     [SerializeField] private GameObject canvasManager;
+
+    [SerializeField] private Text _interactText;
 
     private RaycastHit _hitInfo;
     private Camera _Camera;
@@ -64,7 +67,9 @@ public class PlayerMovement : MonoBehaviour
                 {
                     moveWheel.SetActive(false);
                     objectWheel.SetActive(true);
+                    _interactText.text = hitInfo.transform.GetChild(0).gameObject.GetComponent<PlayerDetection>().interactText;
                     objectWheel.transform.position = Input.mousePosition;
+                    print(Input.mousePosition);
                 }
                 //else if (objectWheel.activeSelf || moveWheel.activeSelf && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if click off ui
                 
@@ -124,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
     {
         objectWheel.SetActive(false);
         _currentObjectSelection = _hitInfo.transform.gameObject;
-        _currentObjectSelection.transform.GetChild(1).gameObject.SetActive(true);
+        _currentObjectSelection.transform.GetChild(0).gameObject.SetActive(true);
 
         agent.stoppingDistance = objectStoppingDistance;
         WalkCycle();

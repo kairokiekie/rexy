@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDetection : MonoBehaviour
 {
     [SerializeField] public AnimationClip animToPlay;
+    [SerializeField] public string interactText;
     [SerializeField] public GameObject gameManager;
     public GameObject player;
 

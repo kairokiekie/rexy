@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
             //Check for left click
             if (Input.GetMouseButtonDown(0))
             {
+                print(hitInfo.transform.gameObject.layer);
 
                 if (hitInfo.transform.gameObject.layer == 7) //if click on object
                 {
@@ -72,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
                     print(Input.mousePosition);
                 }
                 //else if (objectWheel.activeSelf || moveWheel.activeSelf && results.Where(r => r.gameObject.layer == 5).Count() <= 0) //if click off ui
+                else if(hitInfo.transform.gameObject.layer == 3) //if click on another player
+                {
+                    Kiss(hitInfo.transform.gameObject);
+                }
                 
                 else if (hitInfo.transform.gameObject.layer == 6 && results.Where(r => r.gameObject.layer == 9).Count() <= 0) // if nothing else, and click on floor
                 {
@@ -154,6 +159,12 @@ public class PlayerMovement : MonoBehaviour
         print("interact anim " + _anim.name);
         print(currentPlayer);
         _animator.Play(_anim.name);
+    }
+
+    public void Kiss(GameObject target)
+    {
+        print("kiss anim to: " + target);
+        _animator.Play("kiss");
     }
 
     public void SwitchPlayer(GameObject newPlayer)
